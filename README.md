@@ -1,4 +1,4 @@
-#Lus stuff
+#Lua stuff
 
 Stuff for Lua game dev *(also learning to
 write idiomatic Lua on the way)*. The goal is to
