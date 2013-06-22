@@ -1,9 +1,7 @@
 #Lua stuff
 
-Stuff for Lua game dev *(also learning to
-write idiomatic Lua on the way)*. The goal is to
-have a set of utility classes to eliminate boilerplate
-code when making games with [LÖVE2D](http://www.love2d.org) or [MOAI-SDK](http://getmoai.com) games
+Stuff for Lua creative coding *(also learning to
+write idiomatic Lua on the way)*.
 
 ##Contents:
 
@@ -13,6 +11,7 @@ converting/porting/copying [Processing](http://www.processing.org) and
 
   + vec2
     *a Vector class*
+
 
 
 
