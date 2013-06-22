@@ -9,7 +9,7 @@ code when making games with [LÖVE2D](http://www.love2d.org) or [MOAI-SDK](http:
 
 *For the moment, nothing much I'm mostly
 converting/porting/copying [Processing](http://www.processing.org) and
-[openFrameworks](http://www.openframeworks.css) stuff.*
+[openFrameworks](http://www.openframeworks.cc) stuff.*
 
   + vec2
     *a Vector class*
