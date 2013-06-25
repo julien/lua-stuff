@@ -42,6 +42,10 @@ assert(v:mag_sq() == (10 * 10 + 10 * 10))
 -- equals
 assert(v:equals({x = 10, y = 10}) == true)
 
--- more to come ...
--- it's siesta time
+-- tostring
+assert(tostring(v) == 'x = 10, y = 10')
+
+-- type (TODO: fix)
+assert(type(v) == 'table', 'type')
+
 

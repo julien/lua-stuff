@@ -1,22 +1,27 @@
 require 'math'
 
 --[[ 
-Vector class ported/inspired from Processing
-(http://processing.org) 
+Vector class ported/inspired from 
+Processing (http://processing.org) 
 ]]--
 Vec2 = {}
-function Vec2:new(o)
-  o = o or {}
+
+function Vec2:new(v)
   
-  setmetatable(o, self)
+  v = v or {}
+  
+  o = {
+    x = v.x or 0,
+    y = v.y or 0
+  }
+  
   self.__index = self
-  return o
+  return setmetatable(o, self)
 end
 
 function Vec2:add(v)
   self.x = self.x + v.x
   self.y = self.y + v.y
-  return self
 end
 
 function Vec2:sub(v)
@@ -30,7 +35,6 @@ function Vec2:mult(s)
 end
 
 function Vec2:div(s)
-  
   if s  == nil or s == 0 then
     s = 1
   end
@@ -87,11 +91,10 @@ end
 function Vec2:rotate(theta)
   local tempx = self.x
   self.x = self.x * math.cos(theta) - self.y * math.sin(theta)
-  self.y = tempx * math.sin(theta) + y * math.cos(theta)
+  self.y = tempx * math.sin(theta) + self.y * math.cos(theta)
 end
 
 function Vec2:angle_between(v1, v2)
-  
   if v1.x == 0 and v1.y then 
     return 0
   end
@@ -114,14 +117,18 @@ function Vec2:angle_between(v1, v2)
   return math.acos(amt)
 end
 
+function Vec2:set(x, y)
+  self.x = x
+  self.y = y
+end
+
 function Vec2:equals(o)
   o = o or {}
   return self.x == o.x and self.y == o.y
 end
 
-
-
-
-
+function Vec2:__tostring()
+  return 'x = ' .. self.x  .. ', y = ' .. self.y
+end
 
 
